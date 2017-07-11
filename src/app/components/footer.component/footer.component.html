@@ -1,0 +1,17 @@
+<div class="footer-main__content">
+    <div class="footer-main__section">
+        <h4 class="footer-main__section-header">Some contacts goes here</h4>
+        <address class="footer-main__contacts">Here is some contacts:</address>
+        <address class="footer-main__contacts">Email: example@examp.com</address>
+        <address class="footer-main__contacts">Tel: +7 3412 000 000</address>
+    </div>
+    <div class="footer-main__section">
+        <h4 class="footer-main__section-header">We accept</h4>
+        <div class="footer-main__payment">
+        </div>
+    </div>
+    <div class="footer-main__section">
+        <h4 class="footer-main__section-header">Here is a quick navigation:</h4>
+        <a *ngFor="let category of categories" class="footer-main__link" routerLink="/category/{{category.id}}">{{category.name}}</a>
+    </div>
+</div>

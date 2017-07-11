@@ -1,0 +1,19 @@
+<nav class="navigation-top__content">
+    <a class="navigation-top__logo" href="#" title="Go the main page">
+        <img class="navigation-top__logo-img" src="/img/logo.png" alt="logo" /> 
+        Cat shop
+        </a>
+    <div class="navigation-top__panel">
+        <label class="navigation-top__search">
+            <input type="search" placeholder="Search..."/>
+            <img  class="navigation-top__search-img" src="/img/icons/search.png">
+        </label>
+        <a class="navigation-top__icon navigation-top__icon--cart" href="#cart"></a>
+        <a class="navigation-top__icon navigation-top__icon--profile" 
+        (click)="isModalWindowShown = !isModalWindowShown"></a>
+    </div>
+</nav>
+<cat-modal-window 
+    [isModalWindowShown]='isModalWindowShown' 
+    (closeWindows)='onCloseModalWindows($event)'> 
+</cat-modal-window>

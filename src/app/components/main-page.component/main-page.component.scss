@@ -1,0 +1,21 @@
+@import '../../../scss/variables.scss';
+.main-page{
+    &__content-frame{
+        width: 80%;
+        margin: 0 auto;
+    }
+}
+@media screen and (max-width: 1200px) {
+    .main-page{
+        &__content-frame{
+            width:90%;
+        }
+    }
+}
+@media screen and (max-width: 760px) {
+    .main-page{
+        &__content-frame{
+            width:95%;
+        }
+    }
+}

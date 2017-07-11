@@ -1,0 +1,52 @@
+<div class="modal-window" [class.modal-window--visible]="isModalWindowShown">
+    <div class="modal-window__pop-ups" id="reg-window" 
+        [class.modal-window__pop-ups--visible]="isSignInShown()">
+        <div class="modal-window__close" (click)="onCloseModalWindows()">
+        </div>
+        <form class="modal-window__form">
+            <div class="modal-window__line">
+                Registration
+            </div>
+            <div class="modal-window__line">
+                <input class="modal-window__input-email" pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2}" name="email" type="email" required placeholder="Email adress" />
+            </div>
+            <div class="modal-window__line">
+                <input class="modal-window__input-password" name="password" type="password" required placeholder="***" />
+            </div>
+            <div class="modal-window__line">
+                <button class="modal-window__button" type="submit">Register</button>
+            </div>
+            <div class="modal-window__line modal-window__line--text-right">
+                <a class="modal-window__sign-link" (click)="switchPopUp()">Sign In</a>
+            </div>
+        </form>
+    </div>
+    <div class="modal-window__pop-ups" id="sign-window" 
+    [class.modal-window__pop-ups--visible]="isRegistartionShown()">
+        <div class="modal-window__close" (click)="onCloseModalWindows()">
+        </div>
+        <form class="modal-window__form">
+            <div class="modal-window__line">
+                Please Sign In
+            </div>
+            <div class="modal-window__line">
+                <input class="modal-window__input-email" pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2}" name="email" type="email" required placeholder="Email adress" />
+            </div>
+            <div class="modal-window__line">
+                <input class="modal-window__input-password" name="password" type="password" required placeholder="***" />
+            </div>
+            <div class="modal-window__line">
+                <label><input type="checkbox" name="remember" value="remember"> Remember me </label>
+            </div>
+            <div class="modal-window__line">
+                <a class="modal-window__social-icon modal-window__social-icon--vk" href="https://oauth.vk.com/authorize?client_id=6054475&display=page&redirect_uri=http://localhost:2403/index.html&scope=friends&response_type=token&v=5.64"></a>
+            </div>
+            <div class="modal-window__line">
+                <button class="modal-window__button" type="submit">Sign In</button>
+            </div>
+            <div class="modal-window__line modal-window__line--text-right">
+                <a class="modal-window__reg-link" (click)="switchPopUp()">Register</a>
+            </div>
+        </form>
+    </div>
+</div>

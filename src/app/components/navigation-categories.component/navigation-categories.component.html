@@ -1,0 +1,7 @@
+<ul class="navigation-categories">
+    <li *ngFor="let category of categories" class="navigation-categories__point">
+        <a class="navigation-categories__link" routerLink="/category/{{category.id}}" href="#/category/7f82ac85d80c3862">
+            <div class="navigation-categories__img navigation-categories__img--dry-food"></div> {{category.name}}
+        </a>
+    </li>
+</ul>

@@ -1,0 +1,42 @@
+<div class="goods__content-frame">
+  <div class="goods__navigation-categories">
+    <cat-navigation-categories></cat-navigation-categories>
+  </div>
+  <section class="goods__content">
+    <span 
+        [class.goods__grid-view--visible]="isListView()" 
+        class="goods__grid-view" 
+        (click)="switchView();">
+        Grid view
+    </span>
+    <span 
+        [class.goods__list-view--visible]="!isListView()" 
+        class="goods__list-view goods__list-view--visible" 
+        (click)="switchView();">
+        List view
+    </span>
+    <h1 class="goods__header"> {{categoryName}}</h1>
+
+    <div *ngFor="let product of products" [class.goods__good--list]="isListView()" class="goods__good" >
+        <img [class.goods__good-img--list]="isListView()" class="goods__good-img" src="http://via.placeholder.com/120?text={{product.name}}" alt="" />
+        <div [class.goods__good-info--list]="isListView()" class="goods__good-info">
+            <div [class.goods__good-name--list]="isListView()" class="goods__good-name">
+                <a class="goods__good-link" href="#/product/{{product.id}}}">{{product.name}}</a>
+            </div>
+            <div class="goods__good-price">
+                price$
+            </div>
+            <p [class.goods__good-description--visible]="isListView()" class="goods__good-description">
+                description
+            </p>
+            <div [class.goods__good-description--visible]="isListView()" class="goods__good-description">
+                <span class="goods__good-add-cart">Add to cart</span>
+            </div>
+        </div>
+    </div>
+
+    <div [class.goods__good--list]="isListView()" class="goods__good goods__good--dummy"></div>
+    <div [class.goods__good--list]="isListView()" class="goods__good goods__good--dummy"></div>
+    <div [class.goods__good--list]="isListView()" class="goods__good goods__good--dummy"></div>
+  </section>
+</div>
